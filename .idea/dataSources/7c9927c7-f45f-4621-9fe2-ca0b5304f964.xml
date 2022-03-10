@@ -910,132 +910,211 @@ BACKUP_ADMIN,BINLOG_ADMIN,CONNECTION_ADMIN,ENCRYPTION_KEY_ADMIN,GROUP_REPLICATIO
     <table id="284" parent="2" name="articles">
       <Comment>文章</Comment>
     </table>
-    <column id="285" parent="284" name="id">
+    <table id="285" parent="2" name="logs">
+      <Comment>日志</Comment>
+    </table>
+    <table id="286" parent="2" name="tags"/>
+    <column id="287" parent="284" name="id">
       <Position>1</Position>
       <Comment>主键</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="286" parent="284" name="title">
+    <column id="288" parent="284" name="title">
       <Position>2</Position>
       <Comment>文章标题</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="287" parent="284" name="keyword">
+    <column id="289" parent="284" name="keyword">
       <Position>3</Position>
       <Comment>文章关键字（SEO）</Comment>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="288" parent="284" name="author">
+    <column id="290" parent="284" name="author">
       <Position>4</Position>
       <Comment>作者</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="289" parent="284" name="desc">
+    <column id="291" parent="284" name="desc">
       <Position>5</Position>
       <Comment>文章描述</Comment>
       <DataType>varchar(500)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="290" parent="284" name="content">
+    <column id="292" parent="284" name="content">
       <Position>6</Position>
       <Comment>文章内容</Comment>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="291" parent="284" name="numbers">
+    <column id="293" parent="284" name="numbers">
       <Position>7</Position>
       <Comment>字数</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>-1</DefaultExpression>
     </column>
-    <column id="292" parent="284" name="img_url">
+    <column id="294" parent="284" name="img_url">
       <Position>8</Position>
       <Comment>封面图</Comment>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="293" parent="284" name="type">
+    <column id="295" parent="284" name="type">
       <Position>9</Position>
       <Comment>文章类型 =&gt; 0 原创，1 转载，2 混合</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="294" parent="284" name="state">
+    <column id="296" parent="284" name="state">
       <Position>10</Position>
       <Comment>文章发布状态 =&gt; 0 草稿，1 已发布</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="295" parent="284" name="tags">
+    <column id="297" parent="284" name="tags">
       <Position>11</Position>
       <Comment>文章标签</Comment>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="296" parent="284" name="category_id">
+    <column id="298" parent="284" name="category_id">
       <Position>12</Position>
       <Comment>分类id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <column id="297" parent="284" name="category">
+    <column id="299" parent="284" name="category">
       <Position>13</Position>
       <Comment>文章分类</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="298" parent="284" name="views">
+    <column id="300" parent="284" name="views">
       <Position>14</Position>
       <Comment>查看数</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <column id="299" parent="284" name="comments">
+    <column id="301" parent="284" name="comments">
       <Position>15</Position>
       <Comment>评论数</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="300" parent="284" name="likes">
+    <column id="302" parent="284" name="likes">
       <Position>16</Position>
       <Comment>点赞数</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <column id="301" parent="284" name="create_time">
+    <column id="303" parent="284" name="create_time">
       <Position>17</Position>
       <Comment>创建日期</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <column id="302" parent="284" name="update_time">
+    <column id="304" parent="284" name="update_time">
       <Position>18</Position>
       <Comment>最后修改日期</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <key id="303" parent="284" name="PRIMARY">
+    <key id="305" parent="284" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="306" parent="285" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="307" parent="285" name="type">
+      <Position>2</Position>
+      <Comment>0:开发/1:文章</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="308" parent="285" name="content">
+      <Position>3</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="309" parent="285" name="create_time">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="310" parent="285" name="update_time">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <key id="311" parent="285" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="312" parent="286" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="313" parent="286" name="name">
+      <Position>2</Position>
+      <Comment>名称</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="314" parent="286" name="icon">
+      <Position>3</Position>
+      <Comment>图标</Comment>
+      <DataType>varchar(200)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="315" parent="286" name="create_time">
+      <Position>4</Position>
+      <Comment>创建日期</Comment>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="316" parent="286" name="update_time">
+      <Position>5</Position>
+      <Comment>更新日期</Comment>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <key id="317" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
