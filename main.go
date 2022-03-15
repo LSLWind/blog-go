@@ -5,7 +5,9 @@ import (
 	"log"
 )
 
+//TODO 补充日志打印到控制台
 func main() {
+
 	// 1.创建路由
 	r := router.Init()
 	// 2.绑定路由规则，执行的函数

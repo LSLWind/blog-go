@@ -10,5 +10,6 @@ func initLogRouter(router *gin.RouterGroup) {
 	logRouter := router.Group("/logs")
 	{
 		logRouter.GET("/getAllLog", logApi.GetAllLogsContent)
+		logRouter.POST("/add", logApi.InsertOneLog)
 	}
 }
