@@ -29,6 +29,7 @@ func convert(logs []models.Log) []response.LogResponse {
 		var logResponse response.LogResponse
 		logResponse.Content = l.Content
 		logResponse.UpdateTime = l.UpdateTime
+		logResponse.Type = l.Type
 		logResponses[i] = logResponse
 	}
 	return logResponses

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
+	"io"
 	"os"
 )
 
@@ -25,7 +26,9 @@ func initLogrus() error {
 		fmt.Println("创建文件/打开文件失败！")
 		return err
 	}
-	logger.Out = file               // 设置log的默认文件输出
+	mw := io.MultiWriter(os.Stdout, file)
+	logrus.SetOutput(mw) //同时输出到文件和控制台
+	//logger.Out = file               // 设置log的默认文件输出
 	gin.SetMode(gin.ReleaseMode)    // 发布版本
 	gin.DefaultWriter = logger.Out  // gin框架自己记录的日志也会输出
 	logger.Level = logrus.InfoLevel // 设置日志级别
