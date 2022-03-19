@@ -2,9 +2,11 @@ package api
 
 import (
 	"blog-go/models"
+	"blog-go/resp"
 	"blog-go/service"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"strconv"
 )
 
 type ArticleApi struct {
@@ -33,5 +35,14 @@ func (a ArticleApi) GetArticleList(c *gin.Context) {
 	//	List: listRes,
 	//	Count: 1,
 	//}})
+
+}
+
+//分页查询，url/?key=v的形式
+func (a ArticleApi) GetArticleListByPageAndSize(c *gin.Context) {
+	page, _ := strconv.Atoi(c.Query("page"))
+	pageSize, _ := strconv.Atoi(c.Query("pageSize"))
+	res := a.articleService.QueryByPageAndSize(page, pageSize)
+	resp.OK(c, res)
 
 }

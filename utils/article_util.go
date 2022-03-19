@@ -138,10 +138,20 @@ func InsertOneArticleByFilePath(filePath string, tags []string) {
 		return
 	}
 	content := string(data)
-	category := filePath[:len(filePath)-len(file.Name())-2]
+	fileAbsName := file.Name()
+	var category string
+	var title string
+	for i := len(fileAbsName) - 1; i >= 0; i-- {
+		if string(fileAbsName[i]) == fileSeparator {
+			category = fileAbsName[:i]
+			title = fileAbsName[i+1:]
+			break
+		}
+	}
+
 	fmt.Println(category)
 
-	article.Title = file.Name()
+	article.Title = title
 	article.Author = "梁松林"
 	article.Content = content
 	article.Numbers = len(content)

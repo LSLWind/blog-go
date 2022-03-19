@@ -11,10 +11,11 @@ import (
 */
 func initArticleRouter(router *gin.RouterGroup) {
 	articleApi := new(api.ArticleApi)
-	articleRouter := router.Group("/")
+	articleRouter := router.Group("/articles")
 
 	{
 		articleRouter.GET("/getArticleList", articleApi.GetArticleList)
+		articleRouter.GET("/getArticleListByPageAndSize", articleApi.GetArticleListByPageAndSize)
 	}
 
 }

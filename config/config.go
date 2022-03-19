@@ -27,7 +27,7 @@ type MySqlCfg struct {
 var Cfg Config
 
 func init() {
-	file, err := ioutil.ReadFile("./config/config.yml")
+	file, err := ioutil.ReadFile("F:\\projects\\goprojects\\src\\blog-go\\config\\config.yml")
 	if err != nil {
 		log.Fatal(err)
 	}
