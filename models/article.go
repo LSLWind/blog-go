@@ -10,15 +10,15 @@ type Article struct {
 	Desc       string    `json:"desc"`
 	Content    string    `json:"content"`
 	Numbers    string    `json:"numbers"`
-	ImgUrl     string    `json:"img_url"`
+	ImgUrl     string    `json:"imgUrl"`
 	Type       int       `json:"type"`
 	State      int       `json:"state"`
 	Tags       string    `json:"tags"`
-	CategoryId uint      `json:"category_id"`
+	CategoryId uint      `json:"categoryId"`
 	Category   string    `json:"category"`
 	Views      int       `json:"views"`
 	Comments   int       `json:"comments"`
 	Likes      int       `json:"likes"`
-	CreateTime time.Time `json:"create_time"`
-	UpdateTime time.Time `json:"update_time"`
+	CreateTime time.Time `json:"createTime"`
+	UpdateTime time.Time `json:"updateTime"`
 }
