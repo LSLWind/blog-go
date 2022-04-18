@@ -4,22 +4,22 @@ import "time"
 
 //gen --connstr "root:123456@tcp(127.0.0.1:3306)/blog_go?&parseTime=True" --database articles  --json --gorm --from --guregu
 type ArticleResponse struct {
-	Id         uint
-	Title      string
-	Keyword    string
-	Author     string
-	Desc       string
-	Content    string
-	Numbers    string
-	Img_url    string
-	Type       int
-	State      int
-	Tags       string
-	CategoryId uint
-	Category   string
-	Views      int
-	Comments   int
-	Likes      int
-	CreateTime time.Time
-	UpdateTime time.Time
+	Id         uint      `json:"id"`
+	Title      string    `json:"title"`
+	Keyword    string    `json:"keyword"`
+	Author     string    `json:"author"`
+	Desc       string    `json:"desc"`
+	Content    string    `json:"content"`
+	Numbers    string    `json:"numbers"`
+	ImgUrl     string    `json:"imgUrl"`
+	Type       int       `json:"type"`
+	State      int       `json:"state"`
+	Tags       string    `json:"tags"`
+	CategoryId uint      `json:"categoryId"`
+	Category   string    `json:"category"`
+	Views      int       `json:"views"`
+	Comments   int       `json:"comments"`
+	Likes      int       `json:"likes"`
+	CreateTime time.Time `json:"createTime"`
+	UpdateTime string    `json:"updateTime"`
 }
