@@ -25,6 +25,14 @@ func (a ArticleDao) QueryByPageAndSize(page int, pageSize int) []models.Article 
 	}
 	return resp
 }
+
+//根据id返回文章信息
+func (a ArticleDao) QueryArticleById(id int) (article models.Article) {
+	//where 条件查询
+	globalDb.Find(&article, "id = ?", id)
+	return article
+}
+
 func (a ArticleDao) Testq() {
 	var article models.Article
 	globalDb.First(&article)

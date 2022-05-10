@@ -16,6 +16,7 @@ func initArticleRouter(router *gin.RouterGroup) {
 	{
 		articleRouter.GET("/getArticleList", articleApi.GetArticleList)
 		articleRouter.GET("/getArticleListByPageAndSize", articleApi.GetArticleListByPageAndSize)
+		articleRouter.GET("/getArticleById", articleApi.GetArticleById)
 	}
 
 }

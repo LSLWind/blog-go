@@ -40,6 +40,7 @@ func category2CategoryResponse(categories []models.Category) []response.Category
 				categoryResponse := response.CategoryResponse{}
 				categoryResponse.Id = category.Id
 				categoryResponse.Name = category.Name
+				categoryResponse.SvgIcon = category.SvgIcon
 				//一级目录下的第一条子目录
 				subCategory := response.SubCategory{}
 				subCategory.Id = category.SubCategoryId

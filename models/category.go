@@ -7,6 +7,7 @@ type Category struct {
 	Name            string    `json:"name"`
 	SubCategoryId   uint      `json:"subCategoryId"`
 	SubCategoryName string    `json:"subCategoryName"`
+	SvgIcon         string    `json:"svgIcon"`
 	CreateTime      time.Time `json:"createTime"`
 	UpdateTime      time.Time `json:"updateTime"`
 }

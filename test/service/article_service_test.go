@@ -10,3 +10,8 @@ func TestQueryByPageAndSize(t *testing.T) {
 	a := service.ArticleService{}
 	assert.NotNil(t, a.QueryByPageAndSize(1, 10))
 }
+
+func TestQueryArticleById(t *testing.T) {
+	a := service.ArticleService{}
+	assert.NotEmpty(t, a.QueryArticleById(1626))
+}

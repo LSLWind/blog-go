@@ -46,3 +46,10 @@ func (a ArticleApi) GetArticleListByPageAndSize(c *gin.Context) {
 	resp.OK(c, res)
 
 }
+
+//根据id查询文章，url/?id=
+func (a ArticleApi) GetArticleById(c *gin.Context) {
+	id, _ := strconv.Atoi(c.Query("id"))
+	articleResponse := a.articleService.QueryArticleById(id)
+	resp.OK(c, articleResponse)
+}
