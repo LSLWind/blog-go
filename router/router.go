@@ -19,6 +19,7 @@ func Init() *gin.Engine {
 		initLogRouter(apiRouter)
 		initNavigationRouter(apiRouter)
 		initCategoryRouter(apiRouter)
+		initLslRouter(apiRouter)
 	}
 
 	return router
