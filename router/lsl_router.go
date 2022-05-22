@@ -10,5 +10,6 @@ func initLslRouter(router *gin.RouterGroup) {
 	lslRouter := router.Group("/lsl")
 	{
 		lslRouter.POST("/check", lslApi.LslCheckout)
+		lslRouter.POST("/addOneLevelCategory", lslApi.AddOneLevelCategory)
 	}
 }

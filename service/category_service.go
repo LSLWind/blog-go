@@ -3,7 +3,9 @@ package service
 import (
 	"blog-go/dao"
 	"blog-go/models"
+	"blog-go/models/req"
 	"blog-go/models/response"
+	"time"
 )
 
 type CategoryService struct {
@@ -13,6 +15,33 @@ type CategoryService struct {
 func (c CategoryService) GetAllCategory() []response.CategoryResponse {
 	resp, _ := c.categoryDao.QueryAll()
 	return category2CategoryResponse(resp)
+}
+
+// 增加一级目录xinxi
+func (c CategoryService) AddOneLevelCategory(category req.OneLevelCategoryRequest) bool {
+	// 先插入二级目录
+	twoLevelCategory := models.Category{
+		Name:       category.SubTitle,
+		CreateTime: time.Now(),
+		UpdateTime: time.Now(),
+	}
+	subId := c.categoryDao.InsertCategory(twoLevelCategory)
+	//插入一级目录
+	oneLevelCategory := models.Category{
+		Name:            category.Title,
+		SubCategoryId:   subId,
+		SubCategoryName: category.SubTitle,
+		SvgIcon:         category.SvgIcon,
+		CreateTime:      time.Now(),
+		UpdateTime:      time.Now(),
+	}
+	id := c.categoryDao.InsertCategory(oneLevelCategory)
+
+	if id == 0 {
+		logger.Error("插入一级目录失败")
+		return false
+	}
+	return true
 }
 
 /**
@@ -52,3 +81,9 @@ func category2CategoryResponse(categories []models.Category) []response.Category
 	}
 	return categoryResponses
 }
+
+//func oneLevelCategoryReq2Category(request req.OneLevelCategoryRequest)models.Category  {
+//	category := models.Category{}
+//	category.Name = request.Title
+//	category.SubCategoryName =
+//}

@@ -1,6 +1,7 @@
 package config
 
 import (
+	"encoding/gob"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
@@ -8,15 +9,23 @@ import (
 	"os"
 )
 
-var logger = logrus.New() // 创建一个log示例
+// 创建一个全局logger
+var logger *logrus.Logger
+
 func init() {
+	// 创建一个logger
+	logger = logrus.New()
+
 	//日志框架logrus初始化
 	err := initLogrus()
 	if err != nil {
 		fmt.Println(err)
 	}
+
 	logger.Info("初始化日志框架logrus成功")
 
+	// 注册Lsl结构体
+	gob.Register(Lsl{})
 }
 
 func initLogrus() error {

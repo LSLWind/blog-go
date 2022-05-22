@@ -28,3 +28,10 @@ type SecondCategory struct {
 	Name           string
 	SubArticleList []CategoryArticle
 }
+
+// 一级目录信息
+type OneLevelCategoryRequest struct {
+	Title    string `json:"title"`
+	SubTitle string `json:"subTitle"`
+	SvgIcon  string `json:"svgIcon"`
+}
