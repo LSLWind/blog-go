@@ -34,3 +34,12 @@ type ArticleRequest struct {
 	CreateTime time.Time
 	UpdateTime time.Time
 }
+
+// 增加文章请求
+type AddArticleRequest struct {
+	Title      string `json:"title"`
+	Desc       string `json:"desc"`
+	Content    string `json:"content"`
+	Category   string `json:"category"`
+	CategoryId uint   `json:"categoryId"`
+}

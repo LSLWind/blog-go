@@ -2,7 +2,6 @@ package dao
 
 import (
 	"blog-go/models"
-	"fmt"
 )
 
 type ArticleDao struct {
@@ -33,8 +32,12 @@ func (a ArticleDao) QueryArticleById(id int) (article models.Article) {
 	return article
 }
 
-func (a ArticleDao) Testq() {
-	var article models.Article
-	globalDb.First(&article)
-	fmt.Println(article)
+// 添加一篇文章，返回主键id，错误返回0
+func (a ArticleDao) AddOneArticle(article models.Article) uint {
+	err := globalDb.Table("articles").Create(&article).Error
+	if err != nil {
+		logger.Error("Dao插入文章失败：", article)
+		return 0
+	}
+	return article.Id
 }

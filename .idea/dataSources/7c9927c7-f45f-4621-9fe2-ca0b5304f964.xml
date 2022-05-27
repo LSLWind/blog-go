@@ -919,302 +919,331 @@ BACKUP_ADMIN,BINLOG_ADMIN,CONNECTION_ADMIN,ENCRYPTION_KEY_ADMIN,GROUP_REPLICATIO
     <table id="287" parent="2" name="navigations">
       <Comment>导航书签信息</Comment>
     </table>
-    <table id="288" parent="2" name="tags"/>
-    <column id="289" parent="284" name="id">
+    <table id="288" parent="2" name="svg_icon"/>
+    <table id="289" parent="2" name="tags"/>
+    <column id="290" parent="284" name="id">
       <Position>1</Position>
       <Comment>主键</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="290" parent="284" name="title">
+    <column id="291" parent="284" name="title">
       <Position>2</Position>
       <Comment>文章标题</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="291" parent="284" name="keyword">
+    <column id="292" parent="284" name="keyword">
       <Position>3</Position>
       <Comment>文章关键字（SEO）</Comment>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="292" parent="284" name="author">
+    <column id="293" parent="284" name="author">
       <Position>4</Position>
       <Comment>作者</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="293" parent="284" name="desc">
+    <column id="294" parent="284" name="desc">
       <Position>5</Position>
       <Comment>文章描述</Comment>
       <DataType>varchar(500)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="294" parent="284" name="content">
+    <column id="295" parent="284" name="content">
       <Position>6</Position>
       <Comment>文章内容</Comment>
       <DataType>mediumtext|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="295" parent="284" name="numbers">
+    <column id="296" parent="284" name="numbers">
       <Position>7</Position>
       <Comment>字数</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>-1</DefaultExpression>
     </column>
-    <column id="296" parent="284" name="img_url">
+    <column id="297" parent="284" name="img_url">
       <Position>8</Position>
       <Comment>封面图</Comment>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="297" parent="284" name="type">
+    <column id="298" parent="284" name="tags">
       <Position>9</Position>
-      <Comment>文章类型 =&gt; 0 原创，1 转载，2 混合</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>0</DefaultExpression>
-    </column>
-    <column id="298" parent="284" name="state">
-      <Position>10</Position>
-      <Comment>文章发布状态 =&gt; 0 草稿，1 已发布</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>0</DefaultExpression>
-    </column>
-    <column id="299" parent="284" name="tags">
-      <Position>11</Position>
       <Comment>文章标签</Comment>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="300" parent="284" name="category_id">
-      <Position>12</Position>
+    <column id="299" parent="284" name="category_id">
+      <Position>10</Position>
       <Comment>分类id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <column id="301" parent="284" name="category">
-      <Position>13</Position>
+    <column id="300" parent="284" name="category">
+      <Position>11</Position>
       <Comment>文章分类</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="302" parent="284" name="views">
-      <Position>14</Position>
+    <column id="301" parent="284" name="views">
+      <Position>12</Position>
       <Comment>查看数</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <column id="303" parent="284" name="comments">
-      <Position>15</Position>
+    <column id="302" parent="284" name="comments">
+      <Position>13</Position>
       <Comment>评论数</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="304" parent="284" name="likes">
-      <Position>16</Position>
+    <column id="303" parent="284" name="likes">
+      <Position>14</Position>
       <Comment>点赞数</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <column id="305" parent="284" name="create_time">
-      <Position>17</Position>
+    <column id="304" parent="284" name="create_time">
+      <Position>15</Position>
       <Comment>创建日期</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <column id="306" parent="284" name="update_time">
-      <Position>18</Position>
+    <column id="305" parent="284" name="update_time">
+      <Position>16</Position>
       <Comment>最后修改日期</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <key id="307" parent="284" name="PRIMARY">
+    <key id="306" parent="284" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="308" parent="285" name="id">
+    <column id="307" parent="285" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="309" parent="285" name="name">
+    <column id="308" parent="285" name="name">
       <Position>2</Position>
       <Comment>目录名称</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="310" parent="285" name="sub_category_id">
+    <column id="309" parent="285" name="sub_category_id">
       <Position>3</Position>
       <Comment>0：没有子目录，如果是文章则为文章id，没有子目录名称</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="311" parent="285" name="sub_category_name">
+    <column id="310" parent="285" name="sub_category_name">
       <Position>4</Position>
       <Comment>子目录名称</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="312" parent="285" name="svg_icon">
+    <column id="311" parent="285" name="svg_icon">
       <Position>5</Position>
       <DataType>varchar(10000)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="313" parent="285" name="update_time">
+    <column id="312" parent="285" name="update_time">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <column id="314" parent="285" name="create_time">
+    <column id="313" parent="285" name="create_time">
       <Position>7</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <key id="315" parent="285" name="PRIMARY">
+    <key id="314" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="316" parent="286" name="id">
+    <column id="315" parent="286" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="317" parent="286" name="type">
+    <column id="316" parent="286" name="type">
       <Position>2</Position>
       <Comment>0:开发/1:文章</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="318" parent="286" name="content">
+    <column id="317" parent="286" name="content">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="319" parent="286" name="create_time">
+    <column id="318" parent="286" name="create_time">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <column id="320" parent="286" name="update_time">
+    <column id="319" parent="286" name="update_time">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <key id="321" parent="286" name="PRIMARY">
+    <key id="320" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="322" parent="287" name="id">
+    <column id="321" parent="287" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="323" parent="287" name="type">
+    <column id="322" parent="287" name="type">
       <Position>2</Position>
       <Comment>类型</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;资源&apos;</DefaultExpression>
     </column>
-    <column id="324" parent="287" name="link_url">
+    <column id="323" parent="287" name="link_url">
       <Position>3</Position>
       <Comment>链接</Comment>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="325" parent="287" name="name">
+    <column id="324" parent="287" name="name">
       <Position>4</Position>
       <Comment>名称</Comment>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="326" parent="287" name="create_time">
+    <column id="325" parent="287" name="create_time">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <column id="327" parent="287" name="update_time">
+    <column id="326" parent="287" name="update_time">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <key id="328" parent="287" name="PRIMARY">
+    <key id="327" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="329" parent="288" name="id">
+    <column id="328" parent="288" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="330" parent="288" name="name">
+    <column id="329" parent="288" name="name">
+      <Position>2</Position>
+      <Comment>svg icon名称</Comment>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;default&apos;</DefaultExpression>
+    </column>
+    <column id="330" parent="288" name="svg_str">
+      <Position>3</Position>
+      <DataType>varchar(10000)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&lt;svg t=&quot;1653656203580&quot; class=&quot;icon&quot; viewBox=&quot;0 0 1024 1024&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; p-id=&quot;5626&quot; width=&quot;32&quot; height=&quot;32&quot;&gt;&lt;path d=&quot;M848.842 344.764c19.489 35.925 34.184 80.449 43.675 132.331l0.077 0.46c7.343 48.221 7.81 90.363 1.383 125.255-6.031 32.752-18.269 59.824-36.372 80.892-12.895 15.008-28.748 26.853-47.439 35.557 80.18-12.259 146.873-68.348 120.83-239.349-40.307-220.329-160.219-222.314-160.219-222.314s-1.163-0.082-3.312 0.139c7.677 4.189 15.841 9.475 24.219 16.183 21.967 17.589 41.198 41.427 57.158 70.846zM315.152 363.128c-49.887 185.075 40.256 263.169 111.545 295.404v-46.486a15.57 15.57 0 0 1-6.247-3.755l-99.976-98.468c-6.152-6.06-6.227-15.959-0.168-22.111 6.059-6.152 15.959-6.228 22.111-0.168l84.279 83.009v-148.07c0-8.635 7-15.635 15.635-15.635s15.635 7 15.635 15.635v78.215l67.16-66.147c6.151-6.061 16.052-5.984 22.11 0.168 6.06 6.152 5.984 16.052-0.168 22.111l-85.694 84.402a15.626 15.626 0 0 1-3.409 2.533V663.65c56.583-4.35 99.434-23.083 127.594-55.856 41.103-47.837 53.511-127.556 36.883-236.966-25.646-139.951-76.703-206.905-115.03-238.429-21.384-17.589-41.27-26.342-55.389-30.696-38.321 28.297-92.451 96.631-136.871 261.425z&quot; fill=&quot;#FCDE9E&quot; p-id=&quot;5627&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M597.442 196.259c24.885 45.87 43.66 102.788 55.804 169.17l0.077 0.46c9.387 61.636 9.995 115.432 1.807 159.895-7.625 41.406-23.052 75.691-45.851 102.224-19.304 22.467-43.912 39.357-73.613 50.632 16.988-1.666 33.657-4.692 49.571-9.47 10.729-3.221 21.114-7.238 31.023-12.171 8.048-4.006 15.781-8.618 23.13-13.896 17.296 27.643 41.58 45.784 64.574 57.611v-33.965l-42.986-42.337c7.057-7.346 13.564-15.571 19.435-24.748l23.55 23.195V545.59c3.377-12.182 6.011-25.388 7.818-39.696a15.544 15.544 0 0 1 7.817-2.108c8.635 0 15.635 7 15.635 15.635v60.621l51.95-51.167c6.151-6.062 16.052-5.986 22.11 0.168 6.06 6.151 5.984 16.052-0.168 22.11l-66.506 65.504a15.536 15.536 0 0 1-7.386 4.064v85.098c43.956-3.011 77.095-17.19 98.654-42.279 31.196-36.307 40.558-97.22 27.826-181.047-19.967-108.904-59.727-160.26-89.575-184.159-16.944-13.567-32.361-19.814-42.62-22.684-10.392 8.259-22.109 20.286-34.381 37.783a614.35 614.35 0 0 0-7.782-27.076c-3.387-10.825-6.943-21.079-10.643-30.789-65.529-171.946-175.89-173.779-175.89-173.779s-4.196-0.297-11.526 1.442c11.102 5.641 23.172 13.129 35.645 23.116 27.832 22.285 52.225 52.537 72.501 89.912z&quot; fill=&quot;#FCDE9E&quot; p-id=&quot;5628&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M941.622 851.935H801.994l23.21-23.21c6.107-6.106 6.107-16.006 0-22.111-6.106-6.106-16.006-6.106-22.111 0l-23.848 23.849-7.99-23.972c-2.731-8.192-11.587-12.62-19.777-9.889-8.192 2.731-12.619 11.585-9.889 19.777l11.852 35.556h-18.204V736.732c28.589-1.713 53.612-7.542 74.932-17.471 18.691-8.704 34.544-20.55 47.439-35.557 18.103-21.068 30.34-48.141 36.372-80.892 6.426-34.892 5.96-77.033-1.383-125.255l-0.077-0.46c-9.491-51.883-24.186-96.407-43.675-132.331-15.96-29.419-35.191-53.257-57.157-70.845-8.378-6.708-16.542-11.994-24.219-16.183-25.685-14.015-45.842-15.594-49.677-15.766-0.273-0.016-0.774-0.051-1.495-0.051-5.834 0-20.476 1.45-39.581 13.651 3.7 9.709 7.257 19.964 10.643 30.789 16.127-12.229 27.092-13.082 28.747-13.137l0.556 0.009c0.107 0.002 4.952 0.209 12.86 2.421 10.259 2.87 25.676 9.117 42.62 22.684 29.848 23.899 69.608 75.254 89.575 184.159 12.732 83.827 3.37 144.74-27.826 181.047-21.559 25.09-54.697 39.268-98.654 42.279v-85.098a15.536 15.536 0 0 0 7.386-4.064l66.506-65.504c6.152-6.059 6.228-15.959 0.168-22.11-6.059-6.154-15.959-6.23-22.11-0.168l-51.95 51.167v-60.621c0-8.635-7-15.635-15.635-15.635-2.851 0-5.516 0.775-7.817 2.108-1.807 14.308-4.441 27.514-7.818 39.696v77.269l-23.55-23.195c-5.871 9.176-12.378 17.402-19.435 24.748l42.986 42.337V703.827c-20.55-4.745-58.706-17.074-87.704-46.825-9.909 4.932-20.295 8.95-31.023 12.171 38.732 46.468 94.872 61.826 118.727 66.441v116.323h-30.4l23.21-23.21c6.107-6.106 6.107-16.006 0-22.111-6.106-6.106-16.006-6.106-22.111 0l-15.638 15.638c1.635-5.351 0.343-11.405-3.89-15.638-3.904-3.905-9.359-5.3-14.383-4.21-3.875-5.48-11.01-8.034-17.706-5.802-8.192 2.731-12.619 11.585-9.889 19.777l2.525 7.575-6.508 6.508-7.991-23.972c-2.731-8.192-11.585-12.62-19.777-9.889s-12.619 11.586-9.889 19.777l11.852 35.556H457.968v-2.972l20.238-20.238c6.106-6.106 6.106-16.006 0-22.111-5.518-5.518-14.124-6.032-20.239-1.577V694.673c28.86-2 54.8-7.34 77.699-16.033 29.702-11.275 54.309-28.165 73.613-50.632 22.799-26.533 38.225-60.818 45.851-102.224 8.188-44.463 7.581-98.259-1.807-159.895l-0.077-0.46c-12.144-66.383-30.919-123.3-55.804-169.17-20.276-37.375-44.67-67.627-72.501-89.912-12.473-9.987-24.544-17.475-35.645-23.116-30.248-15.37-53.239-16.916-57.101-17.065a28.245 28.245 0 0 0-1.577-0.042c-8.802 0-40.551 3.047-79.547 42.388-48.2 48.626-88.714 132.896-120.415 250.506-6.897 25.587-11.384 49.953-13.513 73.084a45.528 45.528 0 0 0-2.95-0.245 23.428 23.428 0 0 0-1.298-0.028c-5.415 0-24.855 1.797-47.671 24.816-26.652 26.888-48.923 73.026-66.193 137.097-14.396 53.408-9.948 97.674 13.221 131.497 27.478 40.114 72.964 52.776 91.381 56.377v70.318H80.634c-8.635 0-15.635 7-15.635 15.635s7 15.635 15.635 15.635h860.989c8.635 0 15.635-7 15.635-15.635 0-8.634-7-15.634-15.636-15.634z m-588.335-23.21a15.608 15.608 0 0 0 2.615-3.488l8.899 26.698h-34.725l23.211-23.21z m19.993-698.178c30.515-30.785 53.423-32.978 56.964-33.13l-0.008 0.004 0.87 0.002c0.762 0.036 8.672 0.503 20.919 4.28 14.119 4.354 34.004 13.108 55.389 30.696 38.327 31.524 89.384 98.477 115.03 238.429 16.629 109.41 4.22 189.13-36.883 236.966C557.4 640.568 514.55 659.3 457.967 663.65V543.764a15.626 15.626 0 0 0 3.409-2.533l85.694-84.402c6.152-6.06 6.228-15.959 0.168-22.111-6.059-6.152-15.959-6.229-22.11-0.168l-67.16 66.147v-78.215c0-8.635-7-15.635-15.635-15.635s-15.635 7-15.635 15.635v148.069l-84.279-83.009c-6.153-6.06-16.052-5.984-22.111 0.168-6.059 6.152-5.984 16.052 0.168 22.111l99.976 98.468a15.541 15.541 0 0 0 6.247 3.755v51.721c-9.605-1.648-29.026-5.734-51.52-14.637-28.817-11.405-68.872-33.355-96.044-73.156-35.47-51.956-41.622-122.198-18.285-208.776 37.705-139.884 81.951-205.901 112.43-236.649zM137.907 707.286c-17.636-25.913-20.558-61.388-8.684-105.44 35.938-133.327 81.594-138.592 83.606-138.751l0.237 0.004c0.036 0.001 0.984 0.057 2.651 0.346 0.002 0.643 0.001 1.288 0.007 1.929 0.577-0.548 1.149-1.079 1.717-1.594l0.356 0.08c2.225 60.177 20.846 138.901 94.129 185.357-0.123 32.815-7.392 57.794-21.773 74.531-12.415 14.449-30.963 23.301-55.25 26.481V697.66l45.318-44.635c6.152-6.059 6.227-15.959 0.168-22.11-6.061-6.155-15.96-6.228-22.111-0.168l-23.374 23.022v-22.814c0-8.635-7-15.635-15.635-15.635s-15.635 7-15.635 15.635v60.362l-32.751-32.257c-6.152-6.06-16.052-5.985-22.111 0.168a15.547 15.547 0 0 0-4.274 8.412 15.66 15.66 0 0 0 1.575 9.835 15.613 15.613 0 0 0 2.866 3.863l53.414 52.609c0.41 0.404 0.839 0.775 1.28 1.125v14.353a140.288 140.288 0 0 1-9.302-2.661c-17.134-5.543-41.064-16.909-56.424-39.478z m96.996 74.731c23.585-2.538 43.538-9.4 59.678-20.468a99.554 99.554 0 0 0 19.29-17.279c16.684-19.417 26.257-45.896 28.668-79.034 6.559 2.798 13.458 5.375 20.697 7.719-0.195 1.63-0.411 3.233-0.646 4.81 30.199 12.057 55.441 16.31 64.108 17.507V802.09a15.713 15.713 0 0 0-4.514 0.313c-3.874-5.48-11.007-8.034-17.706-5.802-8.192 2.731-12.619 11.586-9.889 19.777l2.525 7.576-6.508 6.508-7.99-23.972c-2.73-8.192-11.585-12.62-19.777-9.889-4.805 1.602-8.299 5.316-9.829 9.762-6.124-5.842-15.817-5.767-21.834 0.251l-23.849 23.849-7.99-23.972c-2.73-8.192-11.584-12.62-19.777-9.889-8.192 2.731-12.62 11.585-9.889 19.777l11.852 35.556h-46.618v-69.918zM802.989 920.73h-570.17c-8.635 0-15.635 7-15.635 15.635s7 15.635 15.635 15.635h570.17c8.635 0 15.635-7 15.635-15.635 0-8.634-7-15.635-15.635-15.635z&quot; fill=&quot;#58A80A&quot; p-id=&quot;5629&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M194.33 746.763a139.682 139.682 0 0 0 9.302 2.661v-14.353a15.68 15.68 0 0 1-1.28-1.125l-53.414-52.609a15.588 15.588 0 0 1-2.866-3.863c7.002 34.64 27.359 56.092 48.258 69.289zM362.59 677.765c0.235-1.577 0.451-3.18 0.646-4.81-7.239-2.345-14.139-4.921-20.697-7.719-2.41 33.138-11.984 59.618-28.668 79.034a99.554 99.554 0 0 1-19.29 17.279c33.268-9.694 60.523-33.51 68.009-83.784zM151.204 597.776c-7.403 27.466-9.03 50.518-6.708 69.863a15.547 15.547 0 0 1 4.274-8.412c6.06-6.153 15.96-6.228 22.111-0.168l32.751 32.257v-60.362c0-8.635 7-15.635 15.635-15.635s15.635 7 15.635 15.635v22.814l23.374-23.022c6.152-6.06 16.051-5.987 22.111 0.168 6.059 6.151 5.984 16.052-0.168 22.11l-45.318 44.635v52.568c24.287-3.18 42.835-12.032 55.25-26.481 14.38-16.736 21.65-41.716 21.773-74.531-73.283-46.456-91.904-125.18-94.129-185.357l-0.356-0.08c-0.568 0.515-1.14 1.046-1.717 1.594-19.486 18.512-43.948 56.095-64.518 132.404z&quot; fill=&quot;#FCDE9E&quot; p-id=&quot;5630&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&apos;</DefaultExpression>
+    </column>
+    <column id="331" parent="288" name="size">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>32</DefaultExpression>
+    </column>
+    <column id="332" parent="288" name="create_time">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="333" parent="288" name="update_time">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <key id="334" parent="288" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="335" parent="289" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="336" parent="289" name="name">
       <Position>2</Position>
       <Comment>名称</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="331" parent="288" name="icon">
+    <column id="337" parent="289" name="icon">
       <Position>3</Position>
       <Comment>图标</Comment>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="332" parent="288" name="create_time">
+    <column id="338" parent="289" name="create_time">
       <Position>4</Position>
       <Comment>创建日期</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <column id="333" parent="288" name="update_time">
+    <column id="339" parent="289" name="update_time">
       <Position>5</Position>
       <Comment>更新日期</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <key id="334" parent="288" name="PRIMARY">
+    <key id="340" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

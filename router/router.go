@@ -1,6 +1,7 @@
 package router
 
 import (
+	"blog-go/api"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
@@ -8,6 +9,16 @@ import (
 )
 
 var logger = logrus.New()
+
+// 初始化API 路由映射
+
+func initSvgIconRouter(router *gin.RouterGroup) {
+	svgIconApi := new(api.SvgIconApi)
+	svgIconRouter := router.Group("/svgIcon")
+	{
+		svgIconRouter.GET("/getSvgIconInfo", svgIconApi.GetSvgIconInfoByName)
+	}
+}
 
 /**
 初始化gin 路由映射
@@ -33,6 +44,7 @@ func Init() *gin.Engine {
 		initNavigationRouter(apiRouter)
 		initCategoryRouter(apiRouter)
 		initLslRouter(apiRouter)
+		initSvgIconRouter(apiRouter)
 	}
 
 	return router

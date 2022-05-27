@@ -3,9 +3,11 @@ package service
 import (
 	"blog-go/dao"
 	"blog-go/models"
+	"blog-go/models/req"
 	"blog-go/models/response"
 	"blog-go/utils"
 	"github.com/sirupsen/logrus"
+	"time"
 )
 
 var logger = logrus.New()
@@ -34,6 +36,30 @@ func (a ArticleService) QueryArticleById(id int) (articleContent response.Articl
 	return article2ArticleContentResponse(article)
 }
 
+// 增加一篇文章
+func (a ArticleService) AddOneArticle(request req.AddArticleRequest) bool {
+	// 计算文章字段
+	article := models.Article{
+		Title:      request.Title,
+		Desc:       request.Desc,
+		Content:    request.Content,
+		CategoryId: request.CategoryId,
+		Category:   request.Category,
+		CreateTime: time.Now(),
+		UpdateTime: time.Now(),
+	}
+	// TODO 计算文章各种字段
+
+	if a.articleDao.AddOneArticle(article) == 0 {
+		logger.Error("增加文章错误: ", article.Title)
+		return false
+	} else {
+		logger.Info("增加文章成功：", article.Title)
+	}
+
+	return true
+}
+
 /**
 文章内容返回数据响应
 - 返回全部信息
@@ -48,7 +74,6 @@ func article2ArticleContentResponse(article models.Article) (articleContent resp
 	articleContent.Content = article.Content
 	articleContent.Numbers = article.Numbers
 	articleContent.ImgUrl = article.ImgUrl
-	articleContent.Type = article.Type
 	articleContent.Tags = article.Tags
 	articleContent.CategoryId = article.CategoryId
 	articleContent.Category = article.Category

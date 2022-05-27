@@ -11,8 +11,6 @@ type Article struct {
 	Content    string    `json:"content"`
 	Numbers    string    `json:"numbers"`
 	ImgUrl     string    `json:"imgUrl"`
-	Type       int       `json:"type"`
-	State      int       `json:"state"`
 	Tags       string    `json:"tags"`
 	CategoryId uint      `json:"categoryId"`
 	Category   string    `json:"category"`

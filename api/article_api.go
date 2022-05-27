@@ -2,6 +2,7 @@ package api
 
 import (
 	"blog-go/models"
+	"blog-go/models/req"
 	"blog-go/resp"
 	"blog-go/service"
 	"fmt"
@@ -52,4 +53,21 @@ func (a ArticleApi) GetArticleById(c *gin.Context) {
 	id, _ := strconv.Atoi(c.Query("id"))
 	articleResponse := a.articleService.QueryArticleById(id)
 	resp.OK(c, articleResponse)
+}
+
+//增加一篇文章，json
+func (a ArticleApi) AddOneArticle(c *gin.Context) {
+	//绑定json格式数据
+	articleRequest := req.AddArticleRequest{}
+
+	if err := c.BindJSON(&articleRequest); err != nil {
+		resp.Error(c, "参数错误")
+	}
+
+	if a.articleService.AddOneArticle(articleRequest) {
+		resp.OK(c, "添加文章成功")
+	} else {
+		resp.Error(c, "添加文章失败")
+	}
+
 }
